@@ -11,8 +11,7 @@ export default () => {
     Object.values(animation.actions).forEach((action) => {
       action.play().paused = true;
     });
-  }, [animation]);
-  console.log(scene);
+  }, []);
   useFrame((state, delta) => {
     Object.values(animation.actions).forEach((action) => {
       const offset = scroll.offset;
@@ -26,12 +25,16 @@ export default () => {
     const empty = animation.ref.current.children.find(
       (child) => child.name === "Empty"
     );
+    // const camera = animation.ref.current.children.find(
+    //   (child) => child.name === "camera"
+    // );
     const emptyPosition = empty.position;
     const cameraPosition = new THREE.Vector3();
     cameraPosition.y = -7;
     cameraPosition.z = 30;
     cameraPosition.x = emptyPosition.x;
     state.camera.position.copy(cameraPosition);
+    // state.camera.lookAt(emptyPosition);
   });
   return (
     <>
