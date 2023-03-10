@@ -95,7 +95,7 @@ function App() {
           intensity={!isNight ? 0.8 : 0.1}
           color={isNight ? "#92b0d0" : "white"}
         />
-        <directionalLight intensity={!isNight ? 1 : 0.2} />
+        <directionalLight intensity={!isNight ? 1 : 0} />
         <Suspense fallback={null}>
           <ScrollControls pages={4}>
             <Scene />
