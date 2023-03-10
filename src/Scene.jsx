@@ -25,9 +25,9 @@ export default () => {
     const empty = animation.ref.current.children.find(
       (child) => child.name === "Empty"
     );
-    // const camera = animation.ref.current.children.find(
-    //   (child) => child.name === "camera"
-    // );
+    const camera = animation.ref.current.children.find(
+      (child) => child.name === "camera"
+    );
     const emptyPosition = empty.position;
     const cameraPosition = new THREE.Vector3();
     cameraPosition.y = -7;
