@@ -46,14 +46,16 @@ export default () => {
     <>
       <Center>
         <Sparkles
-          size={20}
+          size={30}
           scale={[50, 10, 10]}
           position-y={5}
           speed={0.7}
-          count={50}
+          count={45}
         />
         <primitive object={scene} />
       </Center>
     </>
   );
 };
+
+useGLTF.preload("./scene.glb");

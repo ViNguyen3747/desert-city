@@ -1,13 +1,6 @@
 import { Canvas } from "@react-three/fiber";
-import {
-  useGLTF,
-  Center,
-  OrbitControls,
-  Html,
-  ScrollControls,
-  Cloud,
-} from "@react-three/drei";
-import { Suspense, useEffect, useState } from "react";
+import { ScrollControls, Loader } from "@react-three/drei";
+import { Suspense, useState } from "react";
 import Scene from "./Scene";
 const nightSky = `linear-gradient(
         180deg,
@@ -35,6 +28,33 @@ const daySky = `linear-gradient(
         hsl(17deg 67% 86%) 89%,
         hsl(26deg 65% 87%) 100%
       )`;
+const containerStyles = {
+  background: `linear-gradient(
+        180deg,
+        hsl(216deg 46% 68%) 0%,
+        hsl(234deg 38% 73%) 11%,
+        hsl(263deg 33% 75%) 22%,
+        hsl(295deg 27% 74%) 33%,
+        hsl(324deg 38% 78%) 44%,
+        hsl(341deg 50% 81%) 56%,
+        hsl(355deg 58% 84%) 67%,
+        hsl(7deg 65% 85%) 78%,
+        hsl(17deg 67% 86%) 89%,
+        hsl(26deg 65% 87%) 100%
+      )`,
+};
+const barStyles = {
+  height: "10px",
+  borderRadius: "7px",
+  background: " rgb(255, 255, 255)",
+  transition: "0.5s",
+};
+
+const innerStyles = {
+  background: "rgba(236, 236, 238, 0.253)",
+  borderRadius: "7px",
+  height: "10px",
+};
 function App() {
   const [isNight, setIsNight] = useState(false);
 
@@ -102,6 +122,11 @@ function App() {
           </ScrollControls>
         </Suspense>
       </Canvas>
+      <Loader
+        containerStyles={containerStyles}
+        barStyles={barStyles}
+        innerStyles={innerStyles}
+      />
     </>
   );
 }
