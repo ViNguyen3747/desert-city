@@ -84,7 +84,7 @@ function App() {
         </label>
       </div>
       <Canvas
-        camera={{ position: [0, -7, 30], fov: 45 }}
+        camera={{ position: [0, -9, 30], fov: 45 }}
         style={{ background: isNight ? nightSky : daySky }}
       >
         <ambientLight
@@ -97,7 +97,7 @@ function App() {
         />
         <directionalLight intensity={!isNight ? 1 : 0} />
         <Suspense fallback={null}>
-          <ScrollControls pages={4}>
+          <ScrollControls pages={6}>
             <Scene />
           </ScrollControls>
         </Suspense>

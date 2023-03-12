@@ -35,40 +35,6 @@ canvas {
   margin: 20px;
 }
 
-.top {
-  position: fixed;
-  background: white;
-  top: 0;
-  left: 0;
-  height: 10vh;
-  width: 100vw;
-}
-.bottom {
-  position: fixed;
-  background: white;
-  bottom: 0;
-  left: 0;
-  height: 10vh;
-  width: 100vw;
-}
-.left {
-  position: fixed;
-  background: white;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 30vw;
-  min-width: 10px;
-}
-.right {
-  position: fixed;
-  background: white;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 30vw;
-}
-
 .switch {
   font-size: 17px;
   position: relative;
@@ -118,7 +84,7 @@ canvas {
 }
 
 .moon svg {
-  fill: #73c0fc;
+  fill: #ceeaff;
   position: absolute;
   top: 5px;
   left: 5px;

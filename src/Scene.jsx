@@ -1,5 +1,11 @@
 import { useFrame } from "@react-three/fiber";
-import { useGLTF, Center, useAnimations, useScroll } from "@react-three/drei";
+import {
+  useGLTF,
+  Center,
+  useAnimations,
+  useScroll,
+  Sparkles,
+} from "@react-three/drei";
 import { useEffect } from "react";
 import * as THREE from "three";
 export default () => {
@@ -30,15 +36,22 @@ export default () => {
     );
     const emptyPosition = empty.position;
     const cameraPosition = new THREE.Vector3();
-    cameraPosition.y = -7;
+    cameraPosition.y = -8;
     cameraPosition.z = 30;
     cameraPosition.x = emptyPosition.x;
     state.camera.position.copy(cameraPosition);
-    // state.camera.lookAt(emptyPosition);
+    state.camera.lookAt(emptyPosition);
   });
   return (
     <>
       <Center>
+        <Sparkles
+          size={20}
+          scale={[50, 10, 10]}
+          position-y={5}
+          speed={0.7}
+          count={50}
+        />
         <primitive object={scene} />
       </Center>
     </>
