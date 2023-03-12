@@ -24,7 +24,7 @@ export default ({ isNight }) => {
       action.time = THREE.MathUtils.damp(
         action.time,
         action.getClip().duration * offset,
-        30,
+        5,
         delta
       );
     });
