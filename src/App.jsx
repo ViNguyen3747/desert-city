@@ -49,12 +49,17 @@ const barStyles = {
   background: " rgb(255, 255, 255)",
   transition: "0.5s",
 };
-
+const dataStyles = {
+  fontSize: "1rem",
+  fontFamily: '"Sono", sans-serif',
+};
 const innerStyles = {
   background: "rgba(236, 236, 238, 0.253)",
   borderRadius: "7px",
   height: "10px",
+  width: "200px",
 };
+
 function App() {
   const [isNight, setIsNight] = useState(false);
 
@@ -132,6 +137,7 @@ function App() {
         containerStyles={containerStyles}
         barStyles={barStyles}
         innerStyles={innerStyles}
+        dataStyles={dataStyles}
       />
     </>
   );
