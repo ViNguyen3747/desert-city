@@ -118,7 +118,7 @@ function App() {
         <directionalLight intensity={!isNight ? 1 : 0} />
         <Suspense fallback={null}>
           <ScrollControls pages={6}>
-            <Scene />
+            <Scene isNight={isNight} />
           </ScrollControls>
         </Suspense>
       </Canvas>

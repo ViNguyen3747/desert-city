@@ -8,7 +8,7 @@ import {
 } from "@react-three/drei";
 import { useEffect } from "react";
 import * as THREE from "three";
-export default () => {
+export default ({ isNight }) => {
   const scroll = useScroll();
 
   const { scene, animations } = useGLTF("./scene.glb");
@@ -45,13 +45,15 @@ export default () => {
   return (
     <>
       <Center>
-        <Sparkles
-          size={30}
-          scale={[50, 10, 10]}
-          position-y={5}
-          speed={0.7}
-          count={45}
-        />
+        {isNight && (
+          <Sparkles
+            size={30}
+            scale={[50, 10, 10]}
+            position-y={5}
+            speed={0.7}
+            count={45}
+          />
+        )}
         <primitive object={scene} />
       </Center>
     </>
