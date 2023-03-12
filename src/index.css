@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Sono&display=swap");
 html,
 body,
 #root {
@@ -33,6 +34,37 @@ canvas {
   top: 0;
   right: 0;
   margin: 20px;
+}
+.logo {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  font-family: "Sono", sans-serif;
+  color: white;
+  font-size: 12px;
+}
+.logo > span {
+  pointer-events: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+a::before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 0.7rem;
+}
+a:hover::before {
+  background-color: #fff;
+  width: 3rem;
 }
 
 .switch {

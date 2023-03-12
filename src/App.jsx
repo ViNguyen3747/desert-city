@@ -103,6 +103,12 @@ function App() {
           <span className="slider"></span>
         </label>
       </div>
+      <div className="logo">
+        <span>Designed by </span>
+        <a href="https://vi-nguyen.vercel.app/" target="_blank">
+          Vi Nguyen
+        </a>
+      </div>
       <Canvas
         camera={{ position: [0, -9, 30], fov: 45 }}
         style={{ background: isNight ? nightSky : daySky }}
